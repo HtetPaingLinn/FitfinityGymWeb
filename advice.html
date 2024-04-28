@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Greatest Mental Health Habits We're Taking Into 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<style>
+    body{
+        padding-top: 0px;
+    }
+    .containerSec {
+        display: block;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 0px;
+        border-top-right-radius: 3px;
+    }
+    .Advice-Title-Sec{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .Advice-Title-Sec h1 {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        margin-bottom: 20px;
+        height: 116px;
+        padding: 0px 250px 0px 250px;
+    }
+
+    .Advice-Title-Sec p {
+        line-height: 1.5;
+        font-size: 20px;
+
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    .share-section {
+        margin: auto;
+        padding: 0;
+        display: flex;
+        /* height: 300px; */
+    }
+
+    .share-section,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: black
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .share-btns input {
+        display: none;
+    }
+
+    .share-btns {
+        position: relative;
+        width: 360px;
+        height: auto;
+    }
+
+    .share-btns label {
+        position: relative;
+        font-size: 1.5em;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #ff512f, #dd2476);
+        box-shadow: #ff512f 0 15px 18px -8px;
+        border-radius: 50%;
+        z-index: 10;
+        cursor: pointer;
+        color: white;
+        display: none;
+    }
+
+    .share-btns ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 25px;
+        margin: auto;
+        border-radius: 40px;
+        background-color: rgb(226, 224, 224);
+
+    }
+
+    .share-btns ul li a {
+        font-size: 1.2em;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: transform .3s;
+    }
+
+    .share-btns ul li a:hover {
+        transform: translateY(-10px);
+    }
+    
+    .share-btns ul li.twitter a {
+        background-color: rgb(61, 106, 255);
+        box-shadow: rgb(61, 106, 255) 0 15px 18px -8px;
+    }
+
+    .share-btns ul li.facebook a {
+        background-color: #3b5998;
+        box-shadow: #3b5998 0 15px 18px -8px;
+    }
+
+    .share-btns ul li.whatsapp a {
+        background-color: #25d366;
+        box-shadow: #25d366 0 15px 18px -8px;
+    }
+
+    .share-btns ul li.telegram a {
+        background-color: #0088CC;
+        box-shadow: #0088CC 0 15px 18px -8px;
+    }
+
+    .share-btns ul li.pinterest a {
+        background-color: #c8232c;
+        box-shadow: #c8232c 0 15px 18px -8px;
+    }
+
+    .main-foto-advice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-foto-advice .main-content-page-foto {
+        border-radius: 30px;
+        height: 500px;
+        margin-bottom: 10px;
+    }
+
+    .main-foto-advice img {
+        border-radius: 30px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .content-section {
+        font-size: 21px;
+        text-align: justify;
+        color: rgb(52, 52, 52);
+        text-align: center;
+    }
+
+    .content-section h3,
+    h2 {
+        color: black;
+    }
+
+    .related-card1 {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+</style>
+
+<body>
+    <section class="hmzAdvice">
+        <div class="containerSec">
+            <div class="Advice-Title-Sec">
+                <h1 class="Advice-heading">
+                    The Greatest Mental Health Habits We're Taking Into 2023
+                </h1>
+                <p>
+                    Plus, the newest 2023 mental health trends to watch for!
+                </p>
+            </div>
+
+        </div>
+        <div class="share-section">
+            <div class="share-btns">
+                <input type="checkbox" id="sharebutton">
+                <label for="sharebutton">
+                    <i class="ri-share-fill"></i>
+                </label>
+                <ul>
+                    <li class="twitter">
+                        <a href="#">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </li>
+                    <li class="facebook">
+                        <a href="#">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                    </li>
+                    <li class="whatsapp">
+                        <a href="#">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    </li>
+                    <li class="telegram">
+                        <a href="#">
+                            <i class="ri-telegram-fill"></i>
+                        </a>
+                    </li>
+                    <li class="pinterest">
+                        <a href="#">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <p style="text-align: center; font-size: larger;"> By Lexy Parsons </p>
+        <div class="main-foto-advice">
+            <img src="/Image/AdvicePhoto1.webp" alt="content-photo" class="main-content-page-foto">
+        </div>
+        <div class="content-section row">
+            <div class="col-2"></div>
+            <div class="paragraph-content col-8">
+                <p style="text-align: center;"> <span style="font-weight: lighter;"> Although we’ve got a long way to go, mental health awareness
+                        has improved over the years.&nbsp;</span></p>
+                <p style="text-align-last: center; border-bottom: 2px solid rgb(92, 92, 92); padding-bottom: 20px;"> <span style="font-weight: lighter;"> We’re seeing increased mental health awareness, steps toward
+                        reducing the mental health stigma, and a rise in brands and products that support mental health.
+                        As mental health continues to become a popular and pressing topic of conversation, we’re taking
+                        a look at all of the successful mental health habits to take into 2023!
+                        From mental health mocktails to exercising for mental health, we’re sharing the top trends you
+                        need in the year ahead. Plus, a look at the newest trends you can expect to see!</span>
+                </p>
+
+                <h2 style="margin-top: 20px; margin-bottom: 10px; text-align: center; font-weight: 600;">Mental Health Trends That Are Here to Stay </h2>
+                <h3 style="text-align: center; font-weight: 500;">Setting Healthy Boundaries</h3>
+
+                <img  src="/Image/ContentPhoto1.webp" alt="photo"
+                    style="border-radius: 10px; height: 400px; margin-bottom: 10px;">
+                <p style="text-align: justify; text-align-last: center;" > <span style="font-weight: lighter;"> After many years of people-pleasing, over-committing to plans,
+                        and saying yes when we really want to say no, we’re finally learning to set healthy boundaries.
+                        Maybe you’re saying yes to avoid conflict, spare someone’s feelings, or lend a helping hand.
+                        But, if you’re saying yes at the expense of your physical, mental, or emotional health, you’re
+                        really saying “no” to yourself.
+                        This could be in your professional life, personal life, or social life!&nbsp; </span>
+                </p>
+                <p style="text-align: justify; text-align-last: center;"> <span style="font-weight: lighter;"> The good news? We’re seeing a push for a better work-life
+                        balance and more and more people getting on board with </span> <b style="font-weight: bold; color: rgb(61, 106, 255);"> boundary setting </b> <span
+                        style="font-weight: 400;">.&nbsp;</span></p>
+
+                <h3 style="margin-top: 20px; margin-bottom: 10px; text-align: center; font-weight: 600;"> Exercising for Mental Health </h3>
+                <img src="/Image/ContentPhoto2.webp" alt="photo"
+                    style="border-radius: 10px; height: 400px; margin-bottom: 10px;">
+                <p style="text-align: justify; text-align-last: center;" > <span style="font-weight: lighter;"> In the past, exercise was largely focused on body image,
+                        burning calories, and torching fat. Plus, a common myth was that a ‘real’ or ‘good’ workout
+                        meant exercising for hours on end. Thankfully, we’re seeing a huge shift in mentality — rather
+                        than working out to lose weight or look a certain way, more and more people are exercising for
+                        mental health!&nbsp;</span></p>
+                        <br>
+                <p style="text-align: justify; text-align-last: center;" > <span style="font-weight: lighter;"> Considering </span> <b style="color: rgb(61, 106, 255);"> movement</b><span style="font-weight: 400;"> plays a vital role in mental
+                        health, boosting mood and energy, and reducing stress, we’re huge advocates of making movement a
+                        daily part of your routine, but in a fun and sustainable way.&nbsp;</span></p>
+                        <br>
+                <p style="text-align: justify; text-align-last: center;" > <span style="font-weight: lighter;"> Browse the For You category in the FitOn app for workout
+                        suggestions, or try a new workout experience to spice things up a bit! From workouts with
+                        celebrities like Julianne Hough and Gabrielle Union to Vuori and BANDIER workouts, there’s
+                        something for everyone.&nbsp <span></p>
+                <h3 style="margin-top: 20px; margin-bottom: 10px; text-align: center; font-weight: 600;">Eating For Nourishment </h3>
+                <img src="/Image/ContentPhoto3.webp" alt="photo"
+                    style="border-radius: 10px; height: 400px; margin-bottom: 10px;">
+                <p style="text-align: justify; text-align-last: center;" ><span style="font-weight: lighter;">Similar to exercise, our goals for healthy eating have shifted.
+                        Rather than count calories, we’re counting nutrients and colors! The latest health food trends
+                        are centered around eating minimally processed whole foods, clean ingredient labels, and
+                        obtaining our foods from local and sustainable sources. What a welcomed mindset shift! Rather
+                        than restrictive eating, we’re seeing an emphasis on eating for nourishment and mental health.
+                        This includes boosting our diet with superfoods and brain-supportive nutrients, minimizing
+                        processed foods and sugars, and steering away from diet culture. More of this for 2023!</span>
+                </p>
+                <p><b style="color: black;">RELATED: </b><a
+                        href="https://www.self.com/fitness" target="_blank"
+                        rel="noopener"><b style="color: rgb(61, 106, 255);">The Healthiest Foods to Eat in
+                            2023</b></a><b>&nbsp;</b></p>
+            </div>
+            <div class="col"></div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

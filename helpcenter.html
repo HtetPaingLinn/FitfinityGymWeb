@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFinity</title>
+    <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footerStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+      *{
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <nav style="background-color: white; margin-top: -2px; padding-top: 0px; box-shadow: 1px 1px 10px black;" class="navbar navbar-expand-lg bg-body-tertiary border p-2 fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./main.html">
+            <img height="100" src="./image/logo.png" alt="logo" srcset="">
+            <h2 style="display: inline;">Fit<span style="color: blue; margin-left: 0px;">Finity</span></h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./main.html">
+                  <span id="navText" style="font-size: larger;">Home</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown-toggle active" href="./advice.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nav-dropDown" style="font-size: larger;">Advice</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage1.html">Fitness</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage2.html">Nutrition</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage3.html">Self Care</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage4.html">Wellness</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nav-dropDown" style="font-size: larger;">Courses</span>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./Course-Page.html">All Courses</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./CourseDance.html" target="_blank">Total Burns By Dance Workout</a></li>
+                <li><a class="dropdown-item" href="./CourseHot&New.html" target="_blank">Mind & Body</a></li>
+                <li><a class="dropdown-item" href="./CourseKickBoxing.html" target="_blank">Love My Body by Jeanette</a></li>
+                <li><a class="dropdown-item" href="./CoursePilates.html" target="_blank">The Power of Yoga</a></li>
+                <li><a class="dropdown-item" href="./CourseNoEquipment.html" target="_blank">Ultimate 30-Day HIIT</a></li>
+                <li><a class="dropdown-item" href="./CourseToning.html" target="_blank">Break From Stress</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./helpcenter.html">
+                  <span id="navText" style="font-size: larger;">Help Center</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./contact.html">
+                  <span id="navText" style="font-size: larger;">Contact Us</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./trainer.html">
+                  <span id="navText" style="font-size: larger;">About Us</span>
+                </a>
+              </li>
+
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./shop_index.html">
+                  <span id="navText" style="font-size: larger;">Shop</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./bmi-calculator.html" target="_blank">
+                  <span id="navText" style="font-size: larger;">BMI Calculator</span>
+                </a>
+              </li>
+  
+              <div class="dropdown-center me-5">
+                <button class="btn p-1 pe-2 ps-2 rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i id="navText" style="font-size: 26px;" class="bi bi-person-circle"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Htet <img style="margin-left: 30px;" class=" rounded-circle" width="50px" src="/image/profile1.jpg" alt=""></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./home.html">LogOut</a></li>
+                </ul>
+            
+        </div>
+      </nav>
+
+      <section id="QASec1" class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-5 ">
+            <h1 class=" mt-5" style="font-weight: 600;">FAQ</h1>
+            <p style="font-size: 20px;">If you are new to club or overlooking, the following guide will help you learn more about the club and how it works.</p>
+        </div>
+        <div class="col-3 col-m-12">
+            <img style="max-width: 100%; max-width: 100%;" src="./image/FAQ.jpg" alt="">
+        </div>
+    </section>
+
+    <section class=" row" style="margin-bottom: 100px;">
+      <div class=" col-2"></div>
+      <div class="accordion accordion-flush col-8" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingZero">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseZero" aria-expanded="false" aria-controls="flush-collapseZero">
+              <h5>Getting Started with <b style=" font-size: 25px;">Fit<span class=" text-primary">Finity</span></b></h5>
+            </button>
+          </h2>
+          <div id="flush-collapseZero" class="accordion-collapse collapse" aria-labelledby="flush-headingZero" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Fit<span class=" text-primary">Finity</span> makes exercise motivating and fun with a <strong>one-of-a-kind social experience</strong> that lets you interact with fitness pals inside and outside of class, right from your phone. Whether you want to lose weight, tone it up or just sweat, find a better you with friends or solo, with Fit<span class=" text-primary">Finity</span> - fitness on your time.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <h5>How to cast workouts to your TV</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ol>
+                <li>Set up your smart TV or streaming device</li>
+                <li>Make sure your iPhone or iPad is connected to the same Wi-Fi network as your smart TV or streaming device</li>
+                <li>Open the FitOn app and select the workout you want</li>
+                <li>Tap on the workout and tap the <b>Cast</b> icon in top right corner of the screen (If your device is on iOS 14 or later, yo'll need to give the FitOn app permission to connect to streaming devices on your local network, such as your TV, so you can cast to your TV.)</li>
+                <li>Select the device you want to cast to and wait for it to connect. Once connected, the video will play on your TV</li>
+                <li>To disconnect, tap <b>Cast</b> then tap <b>DISCONNECT</b></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <h5>What time of day is best to work out? </h5>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><strong>The best time to work out</strong> is whenever you can fit it in! Have a look at your schedule and figure out what time of day is best for you.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <h5>How long should my workouts be? </h5>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">For adults, the World Health Organisation recommends at least <strong>150-300 minutes</strong> of moderate-intensity aerobic physical activity, or at least <strong>75-150 minutes</strong> each week of vigorous-intensity aerobic physical activity. </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+    <footer>
+      <div style=" max-width: 100%;" class="bg-dark ps-5 pt-1 pb-0 pe-5">
+          <footer class="py-2">
+            <div class="row">
+              <div class="col-6 col-md-2 mb-3">
+                <h1 class=" text-warning">FitFinity</h1>
+                <ul class="nav flex-column mt-4">
+                  <li class="nav-item mb-2"><a href="./main.html" class=" p-0">Home</a></li>
+                  <li class="nav-item mb-2"><a href="./helpcenter.html" class=" p-0">Help Center</a></li>
+                  <li class="nav-item mb-2"><a href="./contact.html" class=" p-0">Contact Us</a></li>
+                  <li class="nav-item mb-2"><a href="./bmi-calculator.html" target="_blank" class="nav-item p-0">BMI Calculator</a></li>
+                  <li class="nav-item mb-2"><a href="./signUp.html" class=" p-0">Sign Up</a></li>
+                </ul>
+              </div>
+         
+              <div class="col-6 col-md-2 mb-3 mt-3">
+                <ul class="nav flex-column" style="margin-top: 93px;">
+                  <li class="nav-item mb-2"><a href="./advice.html" class=" p-0">Advice</a></li>
+                  <li class="nav-item mb-2"><a href="./Course-Page.html" class=" p-0">Courses</a></li>
+                </ul>
+              </div>
+        
+        
+              <div class="col-md-5 offset-md-1 mb-3" style="margin-top: 80px;">
+                <form>
+                  <h5 class=" text-info">Subscribe to our newsletter</h5>
+                  <p class=" text-light">Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            Subscribed successfully! <br> New updates about our website and activities will be informed with the Email fast.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p style="color: greenyellow;">&copy; 2022 Company, Inc. All rights reserved.</p>
+              <!-- Button trigger modal -->
+              <p style="color: yellow; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Privacy Policy
+              </p>
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title" id="staticBackdropLabel">Privacy Policy</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <strong>Introduction</strong> <br> Fitfinity is a workout and fitness website that is committed to protecting the privacy of our users. This Privacy Policy explains the types of information we collect, how we use it, and the steps we take to protect it. By using our website and services, you agree to the collection, use, and disclosure of your information as described in this Privacy Policy.
+                      <br><br>
+                      <strong>Privacy Policy</strong><br> This Privacy Policy describes FitFinity Inc.'s (“FitFinity”) policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+                      <br><br>
+                      <strong>Information We Collect</strong><br>We collect two types of information from our users: personally identifiable information and non-personally identifiable information.
+                      We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+                      <br><br>
+                      If you have any questions about this Privacy Policy, You can contact us by email: privacy@fitfinity.com. <br><br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled d-flex" style="margin-right: 30px;">
+                <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/" target="_blank"><img style="width: 40px;" width="40px" src="./image/facebook.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/" target="_blank"><img style="width: 40px;" width="40px" src="./image/instagram.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://twitter.com/" target="_blank"><img style="width: 40px;" width="40px" src="./image/twitter.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.youtube.com/" target="_blank"><img style="width: 40px;" width="40px" src="./image/youtube.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.pinterest.com/" target="_blank"><img style="width: 40px;" width="40px" src="./image/pinterest.png" alt=""></a></li>
+              </ul>
+            </div>
+          </footer>
+</body>
+</html>

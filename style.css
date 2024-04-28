@@ -1,0 +1,568 @@
+* {
+  
+}
+body{
+  padding-top: 100px;
+}
+.loginBtn:hover{
+    color: rgb(61, 106, 255);
+}
+
+#navText:hover{
+    color: rgb(61, 106, 255);
+}
+
+#nav-dropDown:hover{
+    color: rgb(61, 106, 255);
+}
+.signUpbtn{
+    margin-top: -4px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.signUpbtn:hover{
+    background: rgb(61, 106, 255);
+    color: #fff;
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.signUpbtn:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .signUpbtn::before {
+    content: '';
+    display: inline;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .signUpbtn:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  /* ------------------------HomeSection1------------------------- */
+ #HomeSec1{
+    width: 100%;
+    height: 120%;
+ }
+  .homeDiv{
+    /* background-image: url('/image/HomeSec1.png'); */
+    background-repeat:no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 600px;
+    margin-right: 0px;
+    animation: homeDiv 10s linear infinite 0s;
+    background-image: url('./image/HomeSec1.png');
+  }
+
+  @keyframes homeDiv{
+    
+    0%{
+      background-image: url(./image/loginbg3.jpg);
+      color: rgb(255, 255, 255);
+    }
+    50%{
+      background-image: url(./image/loginbg4.jpg);
+      color: #fff;
+    }
+    100%{
+      background-image: url(./image/loginbg5.jpg);
+      color: #fff;
+    }
+  }
+
+  .SignFreeBtn {
+    display: inline-block;
+    border-radius: 30px;
+    border: none;
+    background: #1875FF;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0px 14px 56px -11px #1875FF;
+    width: 250px;
+    padding: 20px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin-bottom: 100px;
+   }
+   
+   .SignFreeBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+   }
+   
+   .SignFreeBtn span:after {
+    content: 'for free';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+   }
+   
+   .SignFreeBtn:hover span {
+    padding-right: 3.55em;
+   }
+   
+   .SignFreeBtn:hover span:after {
+    opacity: 4;
+    right: 0;
+   }
+
+/* ------------------------HomeSection2------------------------- */
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /* ------------------------HomeSection3------------------------- */
+
+  .workout-categories {
+    background-image: url("https://fitonapp.com/wp-content/themes/fiton-20201105/images/1bab4c8f12a19fdb5bd72dfef2fb8cab.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 30%;
+    padding: 50px;
+    margin-bottom: 40px;
+}
+
+.workout-categories h1 {
+    margin-bottom: 50px;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    
+}
+
+.workout-categories p {
+    
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* .img-pile{
+    width: 90%;
+    height: 50%;
+    justify-content: center;
+    
+}
+
+. img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
+    margin: auto;
+    display: block;
+    opacity: 0.8;
+    border-radius: 10%;
+}
+*/
+.workout-categories p {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px;
+} 
+
+.title {
+    position: absolute;
+    top: -36%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.title1{
+    position: absolute;
+    top: -32%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#signup-btn{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    
+    /*width: 200px;
+    height: 100px;
+    
+    border-radius: 46%;
+
+    background: rgb(255,83,83);
+    background: linear-gradient(90deg, rgba(255,83,83,1) 0%, rgba(218,64,127,1) 57%);
+ */   
+}
+
+#signup-link {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#signup-btn {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    margin-top: 0px;
+   }
+   
+   #signup-btn:hover {
+    letter-spacing: 3px;
+    /* background-color: hsl(261deg 80% 48%); */
+    background: linear-gradient(90deg, rgba(255,83,83,1) 0%, rgba(218,64,127,1) 57%);
+    color: hsl(0, 0%, 100%);
+    box-shadow:rgb(241, 105, 105) 0px 7px 29px 0px;
+   }
+   
+   /* #signup-btn:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   } */
+  /* ------------------------HomeCommentSection------------------------- */
+
+  .commentContainer{
+    width: 50%;
+    height: fit-content;
+    margin: 25px 300px;
+    margin-top: 60px;
+}
+
+.commentCarousel{
+    border: none;
+    box-shadow: 2px 2px 10px blanchedalmond;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.ComSlider{
+    height: 100%;
+    display: flex;
+    width: 500%;
+    transition: all 0.3s;
+}
+
+.ComSlider section{
+    flex-basis: 300%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ComSlider section p{
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.commentControl .arrow{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.arrow.left{
+    left: 10px;
+}
+
+.arrow.right{
+    right: 10px;
+}
+
+.author {
+    color: rgb(30, 108, 252);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+ /* ------------------------HomeWork-anytime-blogSection------------------------- */
+.Work-anytime-blog{
+  height: 181px;
+  padding: 56px;
+  margin-top: 90px;
+}
+
+ /* ------------------------Home_button------------------------- */
+ .Bottom-text {
+  text-align: center;
+  padding-top: 50px;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  height: 10%;
+}
+
+.bottom-signup-btn {
+  padding: 35px 515px 55px 515px;
+}
+
+
+.Home-page-bottom button {
+  padding: 0.8em 1.8em;
+  border: 2px solid rgb(61, 106, 255);;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+}
+
+.Home-page-bottom button::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: rgb(61, 106, 255);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.Home-page-bottom button:hover::before {
+  width: 105%;
+}
+
+.Home-page-bottom button:hover {
+  color: white;
+}
+.Home-page-bottom {
+  background-image: url(./image/GymFotoBlur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footerHomePage {
+  margin-left: 38%;
+}
+
+.footerHomePage a {
+  color: white;
+  text-decoration: none;
+}
+
+.Copyright-section {
+  color: white;
+  text-align: center;
+  top: 0px;
+  line-height: 23px;
+  padding: 45px 0px 45px 0px;
+}
+
+.JoinMemberCmty {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: right;
+  min-height: 685px;
+  border-radius: 10px;
+}
+
+.memberCmtyTitle {
+  font-weight: 605px;
+  float: left;
+}
+.memberCmty-stars {
+  color: yellow;
+  display: inline-block;
+}
+
+.row1400 {
+  max-width: 94%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  font-size: x-large;
+}
+
+.itemsClients {
+  display: inline-block;
+}
+
+.share-section,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black
+}
+
+ul {
+  list-style-type: none;
+}
+
+.share-btns input {
+  display: none;
+}
+
+.share-btns {
+  position: relative;
+  width: 360px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 38%;
+}
+
+.share-btns label {
+  position: relative;
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  box-shadow: #ff512f 0 15px 18px -8px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.share-btns ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  margin: auto;
+  border-radius: 40px;
+  background-color: transparent;
+}
+
+.share-btns ul li a {
+  font-size: 1.5em;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: transform .3s;
+}
+
+.share-btns ul li a:hover {
+  transform: translateY(-10px);
+}
+
+.share-btns ul li.twitter a {
+  background-color: rgb(61, 106, 255);
+  box-shadow: rgb(61, 106, 255) 0 15px 18px -8px;
+}
+
+.share-btns ul li.facebook a {
+  background-color: #3b5998;
+  box-shadow: #3b5998 0 15px 18px -8px;
+}
+
+.share-btns ul li.whatsapp a {
+  background-color: #25d366;
+  box-shadow: #25d366 0 15px 18px -8px;
+}
+
+.share-btns ul li.telegram a {
+  background-color: #0088CC;
+  box-shadow: #0088CC 0 15px 18px -8px;
+}
+
+.share-btns ul li.pinterest a {
+  background-color: #c8232c;
+  box-shadow: #c8232c 0 15px 18px -8px;
+}

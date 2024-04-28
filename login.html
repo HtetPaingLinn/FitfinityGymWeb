@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFinity | Login </title>
+    <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+       *{
+        font-family:'Roboto', sans-serif;
+       }
+        body{
+            background-image: url('./image/loginBackground.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .logbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+        .logcontainer{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px 0 15px;
+            
+        }
+        .loginAcc{
+            color: #fff;
+            font-size: medium;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 10px 0;
+        }
+        .lgHeader{
+            color: #fff;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 10px 0;
+        }
+        .lginput-field .lginput{
+            height: 50px;
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 15px;
+            padding: 0 0 0 60px;
+            background: rgba(255,255,255,0.1);
+            outline: none;
+            font-size: 14px;
+        }
+        .lgIcon{
+            position: relative;
+            top: 43px;
+            left: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+        ::-webkit-input-placeholder{
+            color: #fff;
+        }
+        .lgsubmit{
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            height: 50px;
+            outline: none;
+            width: 100%;
+            color: black;
+            background: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: .3s ;
+            margin-top: 30px;
+        }
+        .lgsubmit:hover{
+            box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+            color: rgb(61, 106, 255);
+        }
+        .lgtwo-col{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #fff;
+            font-size: small;
+            margin-top: 10px;
+        }
+        .lgone{
+            display: flex;
+        }
+        label a{
+            text-decoration: none;
+            color: #fff;
+            font-size: medium;
+        }
+        span{
+			display: block;
+		    margin-left: 20px;
+		    color: red;
+		}
+    </style>
+</head>
+<body>
+    <div class="logbox">
+        <div class="logcontainer">
+    
+            <div class="lgtop">
+                <span class="loginAcc">Have an account?</span>
+                <header class="lgHeader">Login</header>
+            </div>
+            <form class="login_form" action="./main.html" method="post" name="form">
+                <div class="lginput-field">
+                    <i  class="bi bi-person lgIcon"></i>
+                    <input autocomplete="off" type="text" class="lginput" placeholder="Username or Email" name="username">
+                    <span></span>
+                </div>
+        
+                <div class="lginput-field">
+                    <i class="bi bi-lock lgIcon"></i>
+                    <input type="Password"  class="lginput" placeholder="Password" name="password">
+                    <span></span>
+                </div>
+        
+                <div class="lginput-field">
+                    <input type="submit"  class="lgsubmit" value="Login" id="log-in">
+                </div>
+        
+                <div class="lgtwo-col">
+                    <div class="lgone">
+                    <input type="checkbox" name="" id="check">
+                    <label for="check"> <span style="margin-left: 5px; font-size: medium; color: #fff;">Remember Me</span></label>
+                    </div>
+                    <div class="lgtwo">
+                        <label><a href="#">Forgot password?</a></label>
+                    </div>
+                </div>
+                
+                <div>
+                    <p style="text-align: center; margin-top: 20px; color: #fff;">Don't Have an account? &nbsp;
+                        <label><a style="text-decoration: none;" href="./signUp.html">Sign Up</a></label>
+                    </p>
+                </div>
+                <a style="margin-left: 34%; text-decoration: none; color: #fff;" href="./home.html">Previous Page</a>
+            </form>
+        </div>
+        
+    </div>  
+
+    <script>
+        window.onload = ()=>{
+		this.sessionStorage.setItem('username', 'htet');
+		this.sessionStorage.setItem('password', 'uit@2022');
+	}
+	
+	var input = document.getElementsByTagName('input');
+	var login = document.getElementById('log-in');
+	var form = document.querySelector('form');
+	form.onsubmit = ()=>{return true;}
+
+	login.onclick = ()=>{
+
+		if ((input[0].value != "") && (input[1].value != ""))
+		 {
+		 	if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password')))
+		 	 {
+		 	 	form.onsubmit = ()=>{return true;}
+				  document.cookie = "username="+input[0].value;
+				  document.cookie = "password="+input[1].value;
+
+		 	 }
+		 	 else
+		 	 {
+		 	 	if ((input[0].value != sessionStorage.getItem('username')) )
+			 	 {
+			 	 	input[0].nextElementSibling.textContent = "Username NOT match";
+					setTimeout(()=>{
+						input[0].nextElementSibling.textContent = "";
+					}, 2000);
+
+			 	 }
+			 	 if ((input[1].value != sessionStorage.getItem('password')) )
+			 	 {
+			 	 	input[1].nextElementSibling.textContent = "Password NOT match";
+					setTimeout(()=>{
+						input[1].nextElementSibling.textContent = "";
+					}, 2000);
+
+			 	 }
+
+		 	 }
+
+		 }
+		else
+		 {
+			if (input[0].value == "")
+			{
+				input[0].nextElementSibling.textContent = "Username is empty";
+				setTimeout(()=>{
+					input[0].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+			if (input[1].value == "")
+			{
+				input[1].nextElementSibling.textContent = "Password is empty";
+				setTimeout(()=>{
+					input[1].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+		 }
+	}
+    </script>
+</body>
+</html>

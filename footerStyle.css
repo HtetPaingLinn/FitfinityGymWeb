@@ -1,0 +1,14 @@
+footer a{
+    color: #37cdff;
+    text-decoration: none;
+    font-size: 18px;
+}
+footer a:hover{
+    color: rgb(255, 255, 255);
+}
+
+footer h1{
+    font-size: 40px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pilates </title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+    <style>
+        .workout-detail-container {
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .workout-detail-container img {
+            border-radius: 50%;
+            width: 72px;
+            line-height: 72px;
+            height: 72px;
+            border: 1px solid rgb(255, 255, 255);
+            display: inline-block;
+        }
+
+        .headline-content {
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            
+            background: url(/Image/HeadSectionBg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .headline-content .workout-video {
+            text-align: center;
+            margin: 0 auto;
+            /* background: url(/Image/HeadSectionBg.jpg);
+            background-size: 812px 516.867px;
+            background-position: center;
+            background-repeat: no-repeat; */
+           
+        }
+
+        .workout-video {
+            padding-top: 30px;
+        }
+
+        /* .headline-content .back-done-icon-sec {
+            background: url(/Image/HeadSectionBg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } */
+
+        .Trainer-name {
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 10px;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .workout-name {
+            letter-spacing: -1.5px;
+            font-weight: 700;
+            font-size: 40px;
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .workout-category {
+            margin: 0 auto;
+            position: relative;
+            width: 1100px;
+            height: 100%;
+        }
+
+        .workout-category span {
+            background: rgb(61, 106, 255);
+            background-blend-mode: multiply;
+            color: #fff;
+            font-size: 14px;
+            width: 120px;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            display: flex inline;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+        }
+
+        .duration-intense {
+            margin: 0 auto;
+            position: relative;
+            width: 1100px;
+            height: 100%;
+            margin-top: 7px;
+        }
+
+        .duration-intense span {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .workout-description {
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            border-bottom: 1px solid rgb(169, 182, 193);
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .workout-description p {
+            font-size: 20px;
+            color: #1d1d27;
+        }
+
+        .targetArea {
+            font-family: 'Poppins', sans-serif;
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(169, 182, 193);
+        }
+
+        .equipment {
+            font-family: 'Poppins', sans-serif;
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(169, 182, 193);
+        }
+
+        button {
+            width: 9em;
+            height: 3em;
+            border-radius: 30em;
+            font-size: 15px;
+            font-family: inherit;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+            margin-left: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button::before {
+            content: '';
+            width: 0;
+            height: 3em;
+            border-radius: 30em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to right, rgb(61, 106, 255) 0%, #f469a9 100%);
+            transition: .7s ease;
+            display: block;
+            z-index: -1;
+        }
+
+        button:hover::before {
+            width: 9em;
+        }
+
+        button:hover {
+            color: white;
+            transition: 0.7s;
+        }
+
+        .done-button {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .share-section {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .share-section,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: black
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .share-btns input {
+            display: none;
+        }
+
+        .share-btns {
+            position: relative;
+            width: 360px;
+            height: auto;
+        }
+
+        .share-btns label {
+            position: relative;
+            font-size: 1.5em;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+            box-shadow: #ff512f 0 15px 18px -8px;
+            border-radius: 50%;
+            z-index: 10;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .share-btns ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 25px;
+            margin: auto;
+            border-radius: 40px;
+            background-color: white;
+        }
+
+        .share-btns ul li a {
+            font-size: 1.2em;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: transform .3s;
+        }
+
+        .share-btns ul li a:hover {
+            transform: translateY(-10px);
+        }
+
+        .share-btns ul li.twitter a {
+            background-color: rgb(61, 106, 255);
+            box-shadow: rgb(61, 106, 255) 0 15px 18px -8px;
+        }
+
+        .share-btns ul li.facebook a {
+            background-color: #3b5998;
+            box-shadow: #3b5998 0 15px 18px -8px;
+        }
+
+        .share-btns ul li.whatsapp a {
+            background-color: #25d366;
+            box-shadow: #25d366 0 15px 18px -8px;
+        }
+
+        .share-btns ul li.telegram a {
+            background-color: #0088CC;
+            box-shadow: #0088CC 0 15px 18px -8px;
+        }
+
+        .share-btns ul li.pinterest a {
+            background-color: #c8232c;
+            box-shadow: #c8232c 0 15px 18px -8px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="headline-content">
+            <div class="workout-video" style="display: block;">
+                <video width="857.6" height="440.86" controls>
+                    <source src="./Videos/Sculpt and Shred Full Body [At-Home] (online-video-cutter.com).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="back-done-icon-sec">
+                <a href="./Course-Page.html">
+                    <button> Back </button>
+                </a>
+                <a href="./Course-Page.html" class="done-button">
+                    <button> Done </button>
+                </a>
+                <hr style="color: rgb(61,106,255); height: 15px; background-color: rgb(61,106,255);">
+            </div>
+        </div>
+        
+
+        <div class="workout-detail-container">
+            <img src="./image/TrainerFoto6.png" class="trainer-avatar" style="display: inline-block;">
+            <p class="Trainer-name"> Trainer Christine Bullock </p>
+        </div>
+        <p class="workout-name"> Sculpt and Shred Full Body [At-Home] </p>
+        <div class="workout-category">
+            <span> Pilates </span><span> Vuori </span><span> Stretch </span>
+        </div>
+        <div class="duration-intense">
+            <span> 17 min </span>
+            <span>|</span>
+            <span style="margin-right: 5px;"> Intensity </span>
+            <span> 1-4 </span>
+        </div>
+        <div class="workout-description">
+            <p> Hi fam, it's Christine Bullock today with a sculpt and shred workout. Sound brutal? It's a bit of a challenge for sure, but when you start seeing your results, you won't regret it. The pain is nothing compared to the end product.
+                <br><br>
+                Today, I am using a set of 2-pound weights. You can also use anything 5 pounds and under. I also have gliders with me today, but if you don't have any, it's okay! You can also use towels in their place. If you don't even have towels handy, you can follow me without using the gliders and still feel the burn! </p>
+        <div class="targetArea">
+            <h2
+                style="padding: 25px 0px 25px 0px; font-size: 24px; font-weight: 700; width: 350px; display: inline-block; vertical-align: middle; margin-bottom: 0; margin-top: 0; ">
+                Target Area</h2>
+            <p> Full Body </p>
+        </div>
+        <div class="equipment">
+            <h2
+                style="padding: 25px 0px 35px 0px; font-size: 24px; font-weight: 700; width: 350px; display: inline-block; vertical-align: middle; margin-bottom: 0; margin-top: 0;">
+                Equipment</h2>
+            <p> Mat </p>
+        </div>
+        <div class="share-section">
+            <div class="share-btns">
+                <input type="checkbox" id="sharebutton">
+                <label for="sharebutton">
+                    <i class="ri-share-fill"></i>
+                </label>
+                <ul>
+                    <li class="twitter">
+                        <a href="https://twitter.com/">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </li>
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                    </li>
+                    <li class="whatsapp">
+                        <a href="https://web.whatsapp.com/" target="_blank">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    </li>
+                    <li class="telegram">
+                        <a href="https://web.telegram.org/" target="_blank">
+                            <i class="ri-telegram-fill"></i>
+                        </a>
+                    </li>
+                    <li class="pinterest">
+                        <a href="https://www.pinterest.com/" target="_blank">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+    </section>
+</body>
+
+</html>

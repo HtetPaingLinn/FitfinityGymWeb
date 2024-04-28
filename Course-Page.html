@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Courses Page </title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="footerStyle.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .courses-container {
+            margin: 30px;
+        }
+
+        .card-rows {
+            width: 90%;
+            margin: 118px;
+        }
+
+        .card-images {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            width: 210px;
+            height: 131px;
+            border-radius: 16px;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+            background-size: cover;
+            background-position: 50%;
+            background-blend-mode: multiply, normal;
+            display: inline-block;
+        }
+
+        .orangebox {
+            background: rgb(61, 106, 255);
+            border-radius: 10px;
+            width: 80px;
+            line-height: 24px;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 1px solid transparent;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 400;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .orange-box-long {
+            background: rgb(61, 106, 255);
+            border-radius: 10px;
+            width: 100px;
+            line-height: 24px;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 1px solid transparent;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 400;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .button-Start {
+            align-items: center;
+            appearance: none;
+            background-color: #FCFCFD;
+            border-radius: 4px;
+            border-width: 0;
+            box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #36395A;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+            height: 38px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: box-shadow .15s, transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow, transform;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            margin-left: 23%;
+            margin-top: 10px;
+        }
+
+        .button-Start:focus {
+            box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        .button-Start:hover {
+            box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .button-Start:active {
+            box-shadow: #D6D6E7 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+        .button-Start:hover::before {
+            width: 250%;
+        }
+
+
+        .bodyPartCardsContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .PartCards {
+            width: 210px;
+            height: 250px;
+            position: relative;
+            background-color: #f0f0f0;
+            transition: 0.8s;
+            border-radius: 30px;
+            display: inline-block;
+            margin-left: 13px;
+        }
+
+        .partimage1 {
+            width: 210px;
+            height: 150px;
+            background-image: url(./image/PartPhoto1.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+
+        .partimage2 {
+            width: 210px;
+            height: 150px;
+            background-image: url(./image/PartsPhoto2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+
+        .partimage3 {
+            width: 210px;
+            height: 150px;
+            background-image: url(./image/PartPhoto3.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+
+        .partimage4 {
+            width: 210px;
+            height: 150px;
+            background-image: url(./image/PartPhoto4.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+
+        .partimage5 {
+            width: 210px;
+            height: 150px;
+            background-image: url(./image/PartPhoto6.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+        }
+
+        .PartCards:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        .partCaption {
+            width: 210.5px;
+            height: 122px;
+            background-color: rgb(61, 106, 255);
+            /* border-top-right-radius: 80px; */
+            padding: 0.8rem;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .partCaption span {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 2%;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav style="background-color: white; margin-top: -2px; padding-top: 0px; box-shadow: 1px 1px 10px black;" class="navbar navbar-expand-lg bg-body-tertiary border p-2 fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./main.html">
+            <img height="100" src="./image/logo.png" alt="logo" srcset="">
+            <h2 style="display: inline;">Fit<span style="color: blue; margin-left: 0px;">Finity</span></h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+              
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nav-dropDown" style="font-size: larger;">Advice</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage1.html">Fitness</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage2.html">Nutrition</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage3.html">Self Care</a></li>
+                  <li><a class="dropdown-item" href="./AdvicePageCollection/AdvicePage4.html">Wellness</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nav-dropDown" style="font-size: larger;">Courses</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./Course-Page.html">All Courses</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./CourseDance.html">Total Burns By Dance Workout</a></li>
+                  <li><a class="dropdown-item" href="./CourseHot&New.html">Mind & Body</a></li>
+                  <li><a class="dropdown-item" href="./CourseKickBoxing.html">Love My Body by Jeanette</a></li>
+                  <li><a class="dropdown-item" href="./CoursePilates.html">The Power of Yoga</a></li>
+                  <li><a class="dropdown-item" href="./CourseNoEquipment.html">Ultimate 30-Day HIIT</a></li>
+                  <li><a class="dropdown-item" href="./CourseToning.html">Break From Stress</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./helpcenter.html">
+                  <span id="navText" style="font-size: larger;">Help Center</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./contact.html">
+                  <span id="navText" style="font-size: larger;">Contact Us</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./trainer.html">
+                  <span id="navText" style="font-size: larger;">About Us</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./shop_index.html">
+                  <span id="navText" style="font-size: larger;">Shop</span>
+                </a>
+              </li>
+  
+              <li class="nav-item me-4">
+                <a class="nav-link active " aria-current="page" href="./bmi-calculator.html" target="_blank">
+                  <span id="navText" style="font-size: larger;">BMI Calculator</span>
+                </a>
+              </li>
+  
+        </div>
+      </nav>
+
+    <div class="courses-container" style="margin-top: 160px;">
+        <h1 style="margin-left: 2%;">Target Area</h1>
+        <div class="bodyPartCardsContainer">
+            <div class="PartCards">
+                <div class="partimage1"></div>
+                <div class="partCaption">
+                    <span> Back </span>
+                    <a style="text-decoration: none;" href="./CourseToning.html"><div class="button-Start"> Start Now </div></a>
+                </div>
+            </div>
+            <div class="PartCards">
+                <div class="partimage2"></div>
+                <div class="partCaption">
+                    <span> Abs </span>
+                    <a style="text-decoration: none;" href="./CourseNoEquipment.html"><div class="button-Start"> Start Now </div></a>
+                </div>
+            </div>
+            <div class="PartCards">
+                <div class="partimage3"></div>
+                <div class="partCaption">
+                    <span> Arms </span>
+                    <a style="text-decoration: none;" href="./CourseDance.html"><div class="button-Start"> Start Now </div></a>
+                </div>
+            </div>
+            <div class="PartCards">
+                <div class="partimage4"></div>
+                <div class="partCaption">
+                    <span> Total Body </span>
+                    <a style="text-decoration: none;" href="./CoursePilates.html"><div class="button-Start"> Start Now </div></a>
+                </div>
+            </div>
+            <div class="PartCards">
+                <div class="partimage5"></div>
+                <div class="partCaption">
+                    <span> Legs </span>
+                    <a style="text-decoration: none;" href="./CourseKickBoxing.html"><div class="button-Start"> Start Now </div></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-rows">
+            <h1 style="font-family:'Poppins', sans-serif;"> On-Demand </h1>
+            <a href="./CourseHot&New.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursePhoto1.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        HOT & NEW</span>
+                    <p class="orangebox"> New </p>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage2.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        Mobility</span>
+                    <p class="orangebox"> Trending </p>
+                </div>
+            </a>
+            <a href="./CourseNoEquipment.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage3.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Meditation </span>
+                    <p class="orangebox"> Trending </p>
+                </div>
+            </a>
+            <a href="./CoursePilates.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage4.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        Yoga </span>
+                    <p class="orangebox"> Hot </p>
+                </div>
+            </a>
+            <a href="./CourseHot&New.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage5.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        Pilates </span>
+                    <p class="orangebox"> New </p>
+                </div>
+            </a>
+            <a href="./CourseDance.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage6.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        Dance </span>
+                    <p class="orangebox"> Trending </p>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./Image/CoursesImage7.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        At Work </span>
+                    <p class="orangebox"> Trending </p>
+                </div>
+            </a>
+            <a href="./CoursePilates.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage8.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        With Kids </span>
+                    <p class="orange-box-long"> Recommend </p>
+                </div>
+            </a>
+            <a href="./CourseToning.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage9.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; display: block;">
+                        Vuori </span>
+
+                </div>
+            </a>
+            <a href="./CourseNoEquipment.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage10.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        No Equipment </span>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage11.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Cardio </span>
+                </div>
+            </a>
+            <a href="./CourseHot&New.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage12.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Small Space </span>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage13.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Sleep </span>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage14.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Quick Hits </span>
+                </div>
+            </a>
+            <a href="./CourseToning.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage15.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Toning </span>
+                </div>
+            </a>
+            <a href="./CourseToning.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage16.jpg);">
+                    <span
+                        style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer; ">
+                        Stretch </span>
+                </div>
+            </a>
+            <a href="./CourseDance.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage17.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Beginner </span>
+                </div>
+            </a>
+            <a href="./CourseKickBoxing.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage18.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Kickboxing </span>
+                </div>
+            </a>
+            <a href="./CourseNoEquipment.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage19.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Low Impact </span>
+                </div>
+            </a>
+            <a href="./CoursePilates.html" style="text-decoration: none;">
+                <div class="card-images"
+                    style="background-image: linear-gradient(0deg, rgba(129, 131, 132, 0.7), rgba(129, 131, 132, 0.7)), url(./image/CoursesImage20.jpg);">
+                    <span style="font-size: 24px; font-weight: 700; color: white; text-align: center; cursor: pointer;">
+                        Circuits </span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+      <div style=" max-width: 100%;" class="bg-dark ps-5 pt-1 pb-0 pe-5">
+          <footer class="py-2">
+            <div class="row">
+              <div class="col-6 col-md-2 mb-3">
+                <h1 class=" text-warning">FitFinity</h1>
+                <ul class="nav flex-column mt-4">
+                  <li class="nav-item mb-2"><a href="./home.html" class=" p-0">Home</a></li>
+                  <li class="nav-item mb-2"><a href="./helpcenter.html" class=" p-0">Help Center</a></li>
+                  <li class="nav-item mb-2"><a href="./contact.html" class=" p-0">Contact Us</a></li>
+                  <li class="nav-item mb-2"><a href="./bmi-calculator.html" target="_blank" class="nav-item p-0">BMI Calculator</a></li>
+                  <li class="nav-item mb-2"><a href="./signUp.html" class=" p-0">Sign Up</a></li>
+                </ul>
+              </div>
+         
+              <div class="col-6 col-md-2 mb-3 mt-3">
+                <ul class="nav flex-column" style="margin-top: 93px;">
+                  <li class="nav-item mb-2"><a href="./advice.html" class=" p-0">Advice</a></li>
+                  <li class="nav-item mb-2"><a href="./Course-Page.html" class=" p-0">Courses</a></li>
+                </ul>
+              </div>
+        
+        
+              <div class="col-md-5 offset-md-1 mb-3" style="margin-top: 80px;">
+                <form>
+                  <h5 class=" text-info">Subscribe to our newsletter</h5>
+                  <p class=" text-light">Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            Subscribed successfully! <br> New updates about our website and activities will be informed with the Email fast.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p style="color: greenyellow;">&copy; 2022 Company, Inc. All rights reserved.</p>
+              <!-- Button trigger modal -->
+              <p style="color: yellow; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Privacy Policy
+              </p>
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title" id="staticBackdropLabel">Privacy Policy</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <strong>Introduction</strong> <br> Fitfinity is a workout and fitness website that is committed to protecting the privacy of our users. This Privacy Policy explains the types of information we collect, how we use it, and the steps we take to protect it. By using our website and services, you agree to the collection, use, and disclosure of your information as described in this Privacy Policy.
+                      <br><br>
+                      <strong>Privacy Policy</strong><br> This Privacy Policy describes FitFinity Inc.'s (“FitFinity”) policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+                      <br><br>
+                      <strong>Information We Collect</strong><br>We collect two types of information from our users: personally identifiable information and non-personally identifiable information.
+                      We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+                      <br><br>
+                      If you have any questions about this Privacy Policy, You can contact us by email: privacy@fitfinity.com. <br><br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled d-flex" style="margin-right: 30px;">
+                <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/"><img style="width: 40px;" width="40px" src="./image/facebook.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/"><img style="width: 40px;" width="40px" src="./image/instagram.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://twitter.com/"><img style="width: 40px;" width="40px" src="./image/twitter.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.youtube.com/"><img style="width: 40px;" width="40px" src="./image/youtube.png" alt=""></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.pinterest.com/"><img style="width: 40px;" width="40px" src="./image/pinterest.png" alt=""></a></li>
+              </ul>
+            </div>
+          </footer>
+
+</body>
+
+</html>
